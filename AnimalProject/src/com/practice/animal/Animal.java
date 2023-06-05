@@ -69,4 +69,29 @@ public class Animal {
 	public void jump() {
 		System.out.println("動物跳躍是一種本能");
 	}
+	
+	public boolean equals(Object obj) {
+		if (obj == null) {
+			return false;
+		}
+		Animal temp = (Animal)obj; // 強制轉成 Animal 類型
+		if ((this.getName().equals(temp.getName())) && (this.getMonth() == temp.getMonth())) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	// 如果不強轉，也可以採用方法重載，指定只能傳入 Animal 類型的類
+	public boolean equals(Animal obj) {
+		if (obj == null) {
+			return false;
+		}
+
+		if ((this.getName().equals(obj.getName())) && (this.getMonth() == obj.getMonth())) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
