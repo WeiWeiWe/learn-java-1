@@ -1,5 +1,12 @@
 package com.practice.animal;
 
+/** final 使用：
+ * 1. final class： 表示該類沒有子類，也可以寫成 public final class or final public class
+ * 2. final 方法： 表示該方法不允許被子類重寫，但是可以正常被子類繼承使用
+ * 3. final 方法內部局部變量： 只要在具體被使用之前進行賦值即可，一旦被賦值就不允許被修改！
+ * 4. final 類中成員屬性： 賦值過程只能在 -> 1. 定義時直接初始化; 2. 構造方法才進行賦值; 3. 構造代碼塊才進行賦值。
+ *
+ */
 public class Animal {
 	/**
 	 * private: 只允許在本類中進行訪問
@@ -86,7 +93,7 @@ public class Animal {
 	public boolean equals(Animal obj) {
 		if (obj == null) {
 			return false;
-		}
+		} 
 
 		if ((this.getName().equals(obj.getName())) && (this.getMonth() == obj.getMonth())) {
 			return true;
