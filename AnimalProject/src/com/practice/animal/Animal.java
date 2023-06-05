@@ -94,4 +94,8 @@ public class Animal {
 			return false;
 		}
 	}
+	
+	public String toString() {
+		return "暱稱：" + this.getName() + ";年齡：" + this.getMonth();
+	}
 }

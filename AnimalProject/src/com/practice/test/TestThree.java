@@ -9,7 +9,7 @@ public class TestThree {
 		Animal two = new Animal("花花", 2);
 		
 		// 
-		/**
+		/** equals 測試：
 		 * 1. 繼承 Object 中的 equals 方法時，
 		 *    比較的是兩個引用是否指向同一個對象，
 		 *    所以 one 跟 two 指向的是不同的對象！
@@ -26,5 +26,15 @@ public class TestThree {
 		flag = str1.equals(str2);
 		System.out.println("str1 和 str2 的引用比較："+flag); // true
 		System.out.println("str1 和 str2 的引用比較："+(str1 == str2)); // false
+		System.out.println("======================================");
+		/** toString 測試：
+		 * 1. 輸出對象名時，默認會直接調用類中的 toString 方法
+		 * 2. 繼承 Object 中的 toString 方法時，輸出對象的字串表示形式為: 類型訊息+@+地址訊息
+		 * 3. 子類可以通過重寫 toString 方法的形式，改變輸出的內容以及表現形式
+		 */
+		System.out.println(one.toString());
+		System.out.println(one);
+		System.out.println("======================================");
+		System.out.println(str1);
 	}
 }
