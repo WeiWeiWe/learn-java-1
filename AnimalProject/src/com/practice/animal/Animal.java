@@ -29,6 +29,8 @@ public class Animal {
 	}
 	
 	public Animal(String name, int month) {
+		this.name = name;
+		this.month = month;
 		System.out.println("我是父類的帶參構造方法");
 	}
 
