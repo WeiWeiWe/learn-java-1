@@ -7,7 +7,7 @@ import com.practice.animal.Dog;
 public class Test {
 
 	public static void main(String[] args) {
-		Animal one = new Animal();
+//		Animal one = new Animal(); // 抽象類不允許實例化
 		/**
 		 * 向上轉型、隱式轉型、自動轉型：
 		 * 	1. 父類引用指向子類實例
@@ -19,7 +19,6 @@ public class Test {
 		Animal two = new Cat();
 		Animal three = new Dog();
 		
-		one.eat();
 		two.eat();
 		two.setMonth(2);
 		two.getMonth();
