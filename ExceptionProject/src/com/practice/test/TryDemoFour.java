@@ -7,7 +7,10 @@ public class TryDemoFour {
 	public static void main(String[] args) {
 		try {
 			testAge();
-		} catch (Throwable e) {
+		} catch (HotelAgeException e) {
+			System.out.println(e.getMessage());
+			System.out.println("酒店前台工作人員不允許辦理入住登記");
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -36,13 +39,14 @@ public class TryDemoFour {
 //		}
 //	}
 	
-	public static void testAge() throws Throwable {
+	public static void testAge() throws HotelAgeException {
 		System.out.println("請輸入年齡：");
 		Scanner input = new Scanner(System.in);
 		int age = input.nextInt();	
 		
 		if (age < 18 || age > 80) {
-			throw new Exception("18歲以下，80歲以上的住客必須由親友陪同");
+//			throw new Exception("18歲以下，80歲以上的住客必須由親友陪同");
+			throw new HotelAgeException();
 		} else {
 			System.out.println("歡迎入住本酒店");
 		}
